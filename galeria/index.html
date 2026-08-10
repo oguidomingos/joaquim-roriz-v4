@@ -51,21 +51,19 @@
   <div class="wrap up">
     <span class="tag">Galeria</span>
     <h2 class="display">Cada foto, uma agenda.</h2>
-  </div>
-  <div class="marquee">
-    <div class="marquee-track">
-      <div class="marquee-card"><img src="../img/action-1.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-2.webp" alt="Joaquim com a população" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-3.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-4.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-5.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/official.webp" alt="Joaquim Roriz Neto" loading="lazy" style="object-position:top" /></div>
-      <div class="marquee-card"><img src="../img/action-1.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-2.webp" alt="Joaquim com a população" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-3.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-4.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/action-5.webp" alt="Agenda pública no DF" loading="lazy" /></div>
-      <div class="marquee-card"><img src="../img/official.webp" alt="Joaquim Roriz Neto" loading="lazy" style="object-position:top" /></div>
+    <div class="gallery-viewer" aria-label="Galeria de fotos">
+      <figure class="gallery-main">
+        <img id="gallery-main-img" src="../img/action-1.webp" alt="Agenda pública no DF" />
+        <figcaption id="gallery-main-caption">Agenda pública no DF</figcaption>
+      </figure>
+      <div class="gallery-thumbs" aria-label="Selecionar foto">
+        <button class="gallery-thumb is-active" type="button" data-src="../img/action-1.webp" data-alt="Agenda pública no DF"><img src="../img/action-1.webp" alt="" aria-hidden="true" /></button>
+        <button class="gallery-thumb" type="button" data-src="../img/action-2.webp" data-alt="Joaquim com a população"><img src="../img/action-2.webp" alt="" aria-hidden="true" /></button>
+        <button class="gallery-thumb" type="button" data-src="../img/action-3.webp" data-alt="Agenda pública no DF"><img src="../img/action-3.webp" alt="" aria-hidden="true" /></button>
+        <button class="gallery-thumb" type="button" data-src="../img/action-4.webp" data-alt="Agenda pública no DF"><img src="../img/action-4.webp" alt="" aria-hidden="true" /></button>
+        <button class="gallery-thumb" type="button" data-src="../img/action-5.webp" data-alt="Agenda pública no DF"><img src="../img/action-5.webp" alt="" aria-hidden="true" /></button>
+        <button class="gallery-thumb" type="button" data-src="../img/official.webp" data-alt="Joaquim Roriz Neto" data-position="top"><img src="../img/official.webp" alt="" aria-hidden="true" /></button>
+      </div>
     </div>
   </div>
 </section>
@@ -95,6 +93,18 @@ document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('cli
 document.documentElement.classList.add('js');
 var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.15});
 document.querySelectorAll('.up').forEach(function(el){io.observe(el)});
+var mainImg=document.getElementById('gallery-main-img');
+var caption=document.getElementById('gallery-main-caption');
+document.querySelectorAll('.gallery-thumb').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    document.querySelectorAll('.gallery-thumb').forEach(function(item){item.classList.remove('is-active')});
+    btn.classList.add('is-active');
+    mainImg.src=btn.dataset.src;
+    mainImg.alt=btn.dataset.alt;
+    mainImg.style.objectPosition=btn.dataset.position||'center';
+    caption.textContent=btn.dataset.alt;
+  });
+});
 </script>
 </body>
 </html>
