@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Galeria de fotos — Joaquim Roriz Neto</title>
+<meta name="description" content="Fotos reais das agendas públicas de Joaquim Roriz Neto pelas cidades do DF." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header>
+  <a class="brand" href="../"><img class="hlogo" src="../img/roriz-logo.png" alt="Joaquim Roriz Neto — Deputado Distrital" /></a>
+  <nav class="hnav">
+    <a href="../mandato/">Nosso mandato</a>
+    <a href="../historia/">Minha história</a>
+    <a href="../noticias/">Notícias</a>
+    <a class="on" href="../galeria/">Galeria de fotos</a>
+    <a href="../voluntario/">Seja voluntário</a>
+    <a href="../contato/">Contato</a>
+  </nav>
+  <nav class="hbtns">
+    <a class="btn btn-verde" href="../contato/">Manda sua demanda</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="menu" id="menu">
+  <a href="../">Início <em>→</em></a>
+  <a href="../mandato/">Nosso mandato <em>→</em></a>
+  <a href="../historia/">Minha história <em>→</em></a>
+  <a href="../noticias/">Notícias <em>→</em></a>
+  <a href="../galeria/">Galeria de fotos <em>→</em></a>
+  <a href="../voluntario/">Seja voluntário <em>→</em></a>
+  <a class="dest" href="../contato/">Contato <em>→</em></a>
+</nav>
+
+<section class="hero-int">
+  <div class="wrap">
+    <span class="tag">Galeria de fotos</span>
+    <h1 class="display">Rua, gente<br /><em>e cidade.</em></h1>
+    <p class="sub">Registro real das agendas pelas cidades do DF.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap up">
+    <span class="tag">Galeria</span>
+    <h2 class="display">Cada foto, uma agenda.</h2>
+  </div>
+  <div class="marquee">
+    <div class="marquee-track">
+      <div class="marquee-card"><img src="../img/action-1.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-2.webp" alt="Joaquim com a população" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-3.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-4.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-5.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/official.webp" alt="Joaquim Roriz Neto" loading="lazy" style="object-position:top" /></div>
+      <div class="marquee-card"><img src="../img/action-1.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-2.webp" alt="Joaquim com a população" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-3.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-4.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/action-5.webp" alt="Agenda pública no DF" loading="lazy" /></div>
+      <div class="marquee-card"><img src="../img/official.webp" alt="Joaquim Roriz Neto" loading="lazy" style="object-position:top" /></div>
+    </div>
+  </div>
+</section>
+
+<section class="blocao">
+  <div class="wrap up">
+    <h2 class="display">Quer o Joaquim<br />na sua cidade?</h2>
+    <div class="big-grid">
+      <a class="big-btn" href="../contato/">Chama o gabinete <span class="seta">→</span></a>
+      <a class="big-btn" href="https://www.instagram.com/joaquimrorizneto/" target="_blank" rel="noreferrer">Mais fotos no Instagram <span class="seta">→</span></a>
+    </div>
+  </div>
+</section>
+
+<div class="barrinha"></div>
+<footer>
+  <p class="display">Vamos juntos cuidar do DF?</p>
+  <p>
+    Gabinete 04, 2º andar — Câmara Legislativa do DF<br />
+    <a href="tel:+556133488042">(61) 3348-8042</a> ·
+    <a href="mailto:dep.joaquimrorizneto@cl.df.gov.br">dep.joaquimrorizneto@cl.df.gov.br</a>
+  </p>
+</footer>
+
+<script>
+document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open')})});
+document.documentElement.classList.add('js');
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.15});
+document.querySelectorAll('.up').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Participe da Onda Azul — Joaquim Roriz Neto</title>
+<meta name="description" content="Entra pro time do Joaquim Roriz Neto na sua cidade: mobilização, escuta de demandas e ação no DF." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+<header>
+  <a class="brand" href="../"><img class="hlogo" src="../img/roriz-logo.png" alt="Joaquim Roriz Neto — Deputado Distrital" /></a>
+  <nav class="hnav">
+    <a href="../mandato/">Nosso mandato</a>
+    <a href="../historia/">Minha história</a>
+    <a href="../noticias/">Notícias</a>
+    <a href="../galeria/">Galeria de fotos</a>
+    <a class="on" href="../voluntario/">Seja voluntário</a>
+    <a href="../contato/">Contato</a>
+  </nav>
+  <nav class="hbtns">
+    <a class="btn btn-verde" href="#form-vol">Quero entrar</a>
+  </nav>
+  <button class="burger" type="button" aria-label="Abrir menu" onclick="document.body.classList.toggle('menu-open')">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav class="menu" id="menu">
+  <a href="../">Início <em>→</em></a>
+  <a href="../mandato/">Nosso mandato <em>→</em></a>
+  <a href="../historia/">Minha história <em>→</em></a>
+  <a href="../noticias/">Notícias <em>→</em></a>
+  <a href="../galeria/">Galeria de fotos <em>→</em></a>
+  <a href="../voluntario/">Seja voluntário <em>→</em></a>
+  <a class="dest" href="../contato/">Contato <em>→</em></a>
+</nav>
+
+
+<section class="hero-int">
+  <div class="wrap">
+    <span class="tag">Seja voluntário</span>
+    <h1 class="display">Participe da<br /><em>Onda Azul.</em></h1>
+    <p class="sub">Gente de todas as cidades do DF, junta pra ouvir o povo e resolver. Só falta você.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap up">
+    <span class="tag">O que você faz no time</span>
+    <h2 class="display">É simples e é de verdade</h2>
+    <ul class="check">
+      <li>Ser os olhos do mandato na sua rua: contar o que precisa melhorar</li>
+      <li>Ajudar a levar as ações do gabinete pra sua vizinhança</li>
+      <li>Participar das agendas e mutirões na sua cidade</li>
+      <li>Compartilhar o trabalho nas redes e no boca a boca</li>
+    </ul>
+  </div>
+</section>
+
+<section id="form-vol" style="background:#fff">
+  <div class="wrap up">
+    <span class="tag">Bora?</span>
+    <h2 class="display">Entra pro time</h2>
+    <div class="form-card"><form class="form-grid" id="form">
+      <div><label for="f-nome">Seu nome</label><input id="f-nome" name="nome" required placeholder="Como você se chama?" /></div>
+      <div><label for="f-zap">Seu WhatsApp</label><input id="f-zap" name="zap" required placeholder="(61) 90000-0000" /></div>
+      <div class="full"><label for="f-cidade">Sua cidade</label><select id="f-cidade" name="cidade" required>
+        <option value="" disabled selected>Escolha sua cidade</option>
+        <option>Samambaia</option><option>Ceilândia</option><option>Planaltina</option>
+        <option>Santa Maria</option><option>Recanto das Emas</option><option>Gama</option>
+        <option>Taguatinga</option><option>Sobradinho</option><option>São Sebastião</option>
+        <option>Riacho Fundo</option><option>Guará</option><option>Águas Claras</option>
+        <option>Paranoá</option><option>Brazlândia</option><option>Itapoã</option>
+        <option>Estrutural</option><option>Vicente Pires</option><option>Plano Piloto</option>
+        <option>Outra cidade do DF</option>
+      </select></div>
+      <div class="full"><label for="f-msg">Como quer ajudar? (opcional)</label><textarea id="f-msg" name="msg" placeholder="Conta como você quer participar"></textarea></div>
+      <div class="full"><button class="btn btn-azul" type="submit" style="font-size:15px;padding:17px">Quero ser voluntário →</button></div>
+    </form></div>
+  </div>
+</section>
+
+<section class="fotos">
+  <div class="strip">
+    <img src="../img/action-5.webp" alt="Agenda pública" loading="lazy" />
+    <img src="../img/action-1.webp" alt="Agenda pública" loading="lazy" />
+    <img src="../img/action-2.webp" alt="Agenda pública" loading="lazy" />
+    <img src="../img/action-3.webp" alt="Agenda pública" loading="lazy" />
+    <img src="../img/action-4.webp" alt="Agenda pública" loading="lazy" />
+  </div>
+</section>
+
+<div class="barrinha"></div>
+<footer>
+  <p class="display">Vamos juntos cuidar do DF?</p>
+  <p>
+    Gabinete 04, 2º andar — Câmara Legislativa do DF<br />
+    <a href="tel:+556133488042">(61) 3348-8042</a> ·
+    <a href="mailto:dep.joaquimrorizneto@cl.df.gov.br">dep.joaquimrorizneto@cl.df.gov.br</a>
+  </p>
+</footer>
+
+<script>
+document.getElementById('form').addEventListener('submit',function(e){
+  e.preventDefault();
+  var d=new FormData(this);
+  var body=['VOLUNTÁRIO','Nome: '+d.get('nome'),'WhatsApp: '+d.get('zap'),'Cidade: '+d.get('cidade'),'',d.get('msg')||''].join('\n');
+  location.href='mailto:dep.joaquimrorizneto@cl.df.gov.br?subject='+encodeURIComponent('Quero ser voluntário — '+d.get('cidade'))+'&body='+encodeURIComponent(body);
+});
+document.querySelectorAll('.menu a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open')})});
+document.documentElement.classList.add('js');
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target)}})},{threshold:.15});
+document.querySelectorAll('.up').forEach(function(el){io.observe(el)});
+</script>
+</body>
+</html>
