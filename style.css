@@ -103,6 +103,7 @@ h2.display{font-size:clamp(2rem,6vw,3.6rem);margin-top:18px;color:var(--azul)}
 .social-row a{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;
   background:var(--azul);color:#fff;font-family:var(--font-display);font-size:12px;text-decoration:none;
   transition:transform .2s ease,background .2s ease}
+.social-row a svg{width:26px;height:26px;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;fill:none}
 .social-row a:hover{transform:scale(1.12) rotate(-6deg);background:var(--azul-claro);color:var(--azul)}
 
 footer{background:var(--azul-escuro);color:#e8eefb;text-align:center;padding:56px 22px 110px}
