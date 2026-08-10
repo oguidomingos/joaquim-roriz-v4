@@ -371,12 +371,12 @@ body.menu-open .burger.pburger{border-color:#fff}
 
 /* conteudo bottom-left */
 .phero-content{position:absolute;z-index:5;left:clamp(20px,5vw,72px);right:clamp(20px,5vw,72px);
-  bottom:clamp(34px,6vh,72px);display:flex;flex-direction:column;align-items:flex-start;gap:22px}
-.pmark{display:inline-block;background:transparent;border-radius:0;padding:0;
+  top:clamp(96px,13vh,150px);bottom:clamp(34px,6vh,72px);display:flex;flex-direction:column;align-items:flex-start;gap:22px}
+.pmark{position:absolute;top:0;left:0;display:inline-block;background:transparent;border-radius:0;padding:0;
   box-shadow:none;opacity:0;transform:translateY(38px);
   animation:pheroUp 1s cubic-bezier(.22,.7,.24,1) .15s forwards}
 .pmark img{display:block;width:clamp(680px,68vw,1160px);max-width:100%;height:auto}
-.pcopy{font-family:var(--font-sans);color:#fff;font-weight:600;font-size:clamp(1.05rem,1.4vw,1.35rem);
+.pcopy{margin-top:auto;font-family:var(--font-sans);color:#fff;font-weight:600;font-size:clamp(1.05rem,1.4vw,1.35rem);
   line-height:1.55;max-width:520px;text-shadow:0 2px 14px rgba(2,26,64,.6);
   opacity:0;transform:translateY(24px);animation:pheroUp .9s cubic-bezier(.22,.7,.24,1) .5s forwards}
 .ppills{display:flex;flex-wrap:wrap;gap:12px;opacity:0;transform:translateY(24px);
@@ -396,11 +396,11 @@ body.menu-open .burger.pburger{border-color:#fff}
 }
 
 @media(max-width:860px){
-  .phero-content{align-items:center;text-align:center;left:18px;right:18px;top:84px;bottom:34px;justify-content:space-between;gap:18px}
-  .pmark{padding:0;border-radius:0}
+  .phero-content{align-items:center;text-align:center;left:18px;right:18px;top:72px;bottom:34px;justify-content:flex-start;gap:16px}
+  .pmark{position:static;padding:0;border-radius:0}
   .pmark img{width:min(94vw,430px)}
-  .pcopy{max-width:360px;font-size:1.12rem;line-height:1.45}
-  .ppills{flex-direction:column;align-items:stretch;width:min(88vw,340px)}
+  .pcopy{margin-top:0;max-width:360px;font-size:1.12rem;line-height:1.45}
+  .ppills{flex-direction:column;align-items:stretch;width:min(88vw,340px);margin-top:auto}
   .ppill{text-align:center;padding:15px 22px}
   .burger.pburger{top:20px;right:18px}
   body.home-video .float{display:none}
