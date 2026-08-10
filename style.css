@@ -412,7 +412,7 @@ body.menu-open .burger.pburger{border-color:#fff}
 @media(max-width:860px){
   .phero-content{align-items:center;text-align:center;left:18px;right:18px;top:72px;bottom:34px;justify-content:flex-start;gap:14px}
   .pmark{position:static;margin-top:0;padding:0;border-radius:0}
-  .pmark img{width:min(94vw,430px)}
+  .pmark img{width:min(82vw,360px)}
   .pcopy{align-self:center;margin-top:auto;max-width:360px;font-size:1.12rem;line-height:1.45}
   .ppills{align-self:center;flex-direction:column;align-items:stretch;width:min(88vw,340px);margin-top:4px}
   .ppill{text-align:center;padding:15px 22px}
